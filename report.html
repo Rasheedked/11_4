@@ -7,5 +7,101 @@
 </head>
 
 <body>
+<h1>Feedback</h1>
+
+<p>Your Feedback will help us improve</p>
+
+        <table >
+         <form method="post" action="www.google.com">
+            
+            <tbody>
+                <tr rowspan="2"><td>
+                    <label>The name
+                        <input type="text" name="FirstName" maxlength="25" placeholder="FirstName" size="9">
+                        <input type="text" name="LastName" maxlength="25" Placeholder="LastName">
+                    </label>
+                </td></tr>
+                
+                <tr><td>
+                    <label>Phone Number
+                        <input type="tel" name="PhoneNumber" placeholder="050 123 4567"
+                        pattern="\d{3} +\d{3} +\d{4}" required>
+                    </label>
+                </tr>
+                
+                <tr><td>
+                    <label>Age: 
+                        17<input type="range" min="18" max="99" value="25">100
+                    </label>
+                </td></tr>
+                
+                <tr><td>
+                    <label>Order code
+                        <input type="password">
+                    </label>
+                </td></tr>
+
+                <tr>
+                    <td>
+                        <p><strong>How do you prefer to pay for your orders ?</strong></p>
+                        <label>Cash
+                            <input type="checkbox" name="preferredPayment">
+                        </label>
+                        <label>Card
+                            <input type="checkbox" name="preferredPayment">
+                        </label>
+                        <label>Voucher
+                            <input type="checkbox" name="preferredPayment">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><strong>How often you purchase from the website</strong></p>
+                        <label>ones a month
+                            <input type="radio" name="purchaseFrequency">
+                        </label>
+
+                        <label>twice a month
+                            <input type="radio" name="purchaseFrequency">
+                        </label>
+
+                        <label>More than twice a month
+                            <input type="radio" name="purchaseFrequency">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label><br>Comments :<br>
+                            <textarea name="customerFeedback" rows="7" cols="45" placeholder="Add your comment here"></textarea>
+
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Rating:
+                            <select name="rating">
+                                <option>5</option>
+                                <option selected>4</option>
+                                <option>3</option>
+                                <option>2</option>
+                                <option>1</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr><td>
+                    <input type="submit" name="submitBtn" value="Send" >
+                    <input type="reset" name="resetBtn">
+                </td></tr>
+            </tbody>
+        </table>
+
     
 </body>
