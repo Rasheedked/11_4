@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,46 @@
 </head>
 
 <body>
-<h1>Feedback</h1>
+    <h1>Feedback</h1>
 
-<p>Your Feedback will help us improve</p>
+    <p>Your Feedback will help us improve</p>
 
-        <table >
-         <form method="post" action="www.google.com">
-            
+    <table>
+        <form method="post" action="www.google.com">
+
             <tbody>
-                <tr rowspan="2"><td>
-                    <label>The name
-                        <input type="text" name="FirstName" maxlength="25" placeholder="FirstName" size="9">
-                        <input type="text" name="LastName" maxlength="25" Placeholder="LastName">
-                    </label>
-                </td></tr>
-                
-                <tr><td>
-                    <label>Phone Number
-                        <input type="tel" name="PhoneNumber" placeholder="050 123 4567"
-                        pattern="\d{3} +\d{3} +\d{4}" required>
-                    </label>
+                <tr rowspan="2">
+                    <td>
+                        <label>The name
+                            <input type="text" name="FirstName" maxlength="25" placeholder="FirstName" size="9">
+                            <input type="text" name="LastName" maxlength="25" Placeholder="LastName">
+                        </label>
+                    </td>
                 </tr>
-                
-                <tr><td>
-                    <label>Age: 
-                        17<input type="range" min="18" max="99" value="25">100
-                    </label>
-                </td></tr>
-                
-                <tr><td>
-                    <label>Order code
-                        <input type="password">
-                    </label>
-                </td></tr>
+
+                <tr>
+                    <td>
+                        <label>Phone Number
+                            <input type="tel" name="PhoneNumber" placeholder="050 123 4567"
+                                pattern="\d{3} +\d{3} +\d{4}" required>
+                        </label>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Age:
+                            17<input type="range" min="18" max="99" value="25">100
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Order code
+                            <input type="password">
+                        </label>
+                    </td>
+                </tr>
 
                 <tr>
                     <td>
@@ -76,7 +84,8 @@
                 <tr>
                     <td>
                         <label><br>Comments :<br>
-                            <textarea name="customerFeedback" rows="7" cols="45" placeholder="Add your comment here"></textarea>
+                            <textarea name="customerFeedback" rows="7" cols="45"
+                                placeholder="Add your comment here"></textarea>
 
                         </label>
                     </td>
@@ -95,13 +104,16 @@
                         </label>
                     </td>
                 </tr>
-                
-                <tr><td>
-                    <input type="submit" name="submitBtn" value="Send" >
-                    <input type="reset" name="resetBtn">
-                </td></tr>
-            </tbody>
-        </table>
 
-    
+                <tr>
+                    <td>
+                        <input type="submit" name="submitBtn" value="Send">
+                        <input type="reset" name="resetBtn">
+                    </td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
+
+
 </body>
