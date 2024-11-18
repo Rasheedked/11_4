@@ -1,43 +1,490 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset and Body Styling */
+* {
     margin: 0;
     padding: 0;
-    background-color: #b86161;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    /*background-color: #9e9999;*/
+    color: #333;
+    overflow-y: auto; /* Enables scrolling */
+    line-height: 1.6;
 }
 
-header {
-    background: #d3b81e;
-    color: #000000;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
+    /*background-color: #fff;*/
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
+}
+.search-bar {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-section {
+/* Navigation Styling */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 183, 0);
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.nav a {
+    margin: 0 15px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    /*background-color: #984c4c;*/
+}
+.hero h1 {
+    color: #333;
+    font-size: 36px;
+}
+.hero p {
+    color: #d4af37;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.hero .promo {
+    font-size: 48px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.button {
+    background-color: #d4af37;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.button:hover {
+    background-color: #b89325;
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    padding: 5px 0;
+    /*background-color: #fff;*/
+}
+.slideshow-image {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+.active {
+    display: block;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    /*background-color: grey;*/
+    text-align: center;
+    border: 3px solid black;
+}
+.about h2 {
+    font-size: 28px;
+    color: #333;
     margin-bottom: 20px;
 }
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: black;
+   
+}
 
-footer {
+/* Contact Us Section */
+.contact {
+    padding: 40px 20px;
+    /*background-color: goldenrod;*/
     text-align: center;
-    padding: 10px 0;
-    background: #333;
+    border: 3px solid black;
+}
+.contact h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-details div {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+.contact-details div i {
+    color: #d4af37;
+    margin-right: 10px;
+}
+body {
+    background-image: url('https://media.istockphoto.com/id/1364650429/vector/white-marble-vector-texture-gold-cracked-kintsugi-background-elegant-card.jpg?s=612x612&w=0&k=20&c=ZiEkunxRB3J6WbSUNom8XaiGId7eErv_Tv_nh2RoxAo=');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #9e9999; /* Fallback background color */
+    color: #333;
+    overflow-y: auto; /* Enables scrolling */
+    line-height: 1.6;
+}
+.icon-menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+.icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+  
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+
+  .signup-page {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://media.istockphoto.com/id/1364650429/vector/white-marble-vector-texture-gold-cracked-kintsugi-background-elegant-card.jpg?s=612x612&w=0&k=20&c=ZiEkunxRB3J6WbSUNom8XaiGId7eErv_Tv_nh2RoxAo=');
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-page form {
+    background-color: #1f1f1f; /* Darker shade for the form */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    width: 80%; /* Medium width for responsiveness */
+    max-width: 500px; /* Prevent form from being too wide */
+}
+
+.signup-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+
+.signup-page table {
+    width: 100%;
+}
+
+.signup-page td {
+    padding: 10px 5px;
+    vertical-align: top;
+}
+
+.signup-page label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.signup-page input[type="text"],
+.signup-page input[type="email"],
+.signup-page input[type="password"],
+.signup-page input[type="tel"],
+.signup-page select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 5px;
+    background-color: #2c2c2c; /* Dark input background */
+    color: #e0e0e0; /* Light text inside inputs */
+    font-size: 0.95rem;
+}
+
+.signup-page input[type="radio"] {
+    margin-right: 5px;
+}
+
+.signup-page button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-page button[type="submit"] {
+    background-color: #4CAF50;
     color: #fff;
+}
+
+.signup-page button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.signup-page button[type="reset"] {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.signup-page button[type="reset"]:hover {
+    background-color: #d32f2f;
+}
+
+.signup-page select {
+    padding: 8px;
+    width: 100%;
+    background-color: #000000;
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .signup-page form {
+        padding: 20px;
+    }
+
+    .signup-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .signup-page button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .signup-page td {
+        display: block;
+        width: 100%;
+    }
+
+    .signup-page td:first-child {
+        margin-bottom: 5px;
+    }
+}
+
+/* here the css for category page */
+
+/* Category Banner Styling */
+.category-banner {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('skincare-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.category-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-banner p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* Filter Section Styling */
+.filters {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.filter-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-container select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+/* Products Grid Styling */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Card Styling - Square Layout */
+.product-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1 / 1;  /* Makes it square */
+    width: 300px;         /* Fixed width */
+    height: 550px;        /* Fixed height */
+    margin: 0 auto;
+}
+
+.product-card img {
+    width: 100%;
+    height: 55%;         /* Take up half the card height */
+    object-fit: contain; /* Prevents image distortion */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+    /* Prevent text overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.add-to-cart:hover {
+    background-color: #b89325;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, 250px);
+    }
+    
+    .category-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .category-banner p {
+        font-size: 1rem;
+    }
+
+    .product-card {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
+    
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-card {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+.product-card .specs {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.product-card .description {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+    /* Ensure description doesn't overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
