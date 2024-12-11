@@ -27,8 +27,8 @@ function renderWishlist() {
 
 // Remove Item from Wishlist
 function removeFromWishlist(itemId) {
-    let index= -1; // assuming the item is not found.
-    for (let i= 0; i< wishlistData.length; i++) {
+    var index= -1; // assuming the item is not found.
+    for (var i= 0; i< wishlistData.length; i++) {
         if (wishlistData[i].id === itemId) {
             index = i; 
             break; 
