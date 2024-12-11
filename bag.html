@@ -4,6 +4,130 @@
 <meta charset="UTF-8">
 <title>Your Bag</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+        .header .logo img {
+            height: 70px; 
+            width: auto; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .bag-items {
+            flex: 3;
+            background: white;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .bag-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #000000;
+        }
+
+        .bag-item img {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .bag-item-details {
+            flex: 1;
+        }
+
+        .bag-item-details h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #ff0000;
+        }
+
+        .bag-item-details p {
+            margin: 5px 0;
+            color: #000000;
+        }
+
+        .remove-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        /*Order Summary */
+        .order-summary {
+            flex: 2;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .order-summary h2 {
+            font-size: 18px;
+            color: #000000;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .promo-code {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .promo-code input {
+            flex: 4;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .promo-code button {
+            flex: 1;
+            background: #c1a137;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .subtotal {
+            font-size: 16px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkout-btn {
+            background: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
         <!-- Header -->
