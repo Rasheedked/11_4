@@ -93,3 +93,23 @@ function updateSubtotal() {
     }
     document.getElementById("subtotal").textContent = "AED " + subtotal.toFixed(2);
 }
+
+function applyPromoCode() 
+{
+    var promoInput = document.getElementById("promo-code").value;
+    if (promoInput === "DISCOUNT10") 
+        {
+        var discount = subtotal * 0.1;
+        subtotal -= discount;
+        alert("Promo code applied! You saved AED " + discount.toFixed(2));
+    } 
+    else 
+    {
+        alert("Invalid promo code.");
+    }
+    document.getElementById("subtotal").textContent = "AED " + subtotal.toFixed(2);
+}
+
+// Initial Render
+renderBagItems();
+
