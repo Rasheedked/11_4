@@ -51,18 +51,17 @@ function renderBagItems() {
         var removeButton = document.createElement("button");
         removeButton.className = "remove-btn";
         removeButton.textContent = "Remove";
-        removeButton.onclick = (function (id) 
-        {
-            return function () 
-            {
-                removeFromBag(id);
-            };
-        })(item.id);
 
+        // Function to handle the click event the Remove button
+        function handleRemoveClick() {
+            var id= item.id; 
+            removeFromBag(id);
+        }
+        removeButton.onclick =handleRemoveClick;
+        
         bagItemDiv.appendChild(itemImage);
         bagItemDiv.appendChild(itemDetails);
         bagItemDiv.appendChild(removeButton);
-
         bagItemsContainer.appendChild(bagItemDiv);
     }
 
