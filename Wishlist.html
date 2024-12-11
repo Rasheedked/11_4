@@ -58,3 +58,57 @@
         }
     </style>
 </head>
+<body>
+    <!-- Header-->
+    <header class="header">
+        <div class="logo">
+            <img src="Screen_Shot_2020-12-19_at_11.40.50_AM-removebg-preview (3).png" alt="Golden Brand Logo">
+        </div>
+        <input type="text" class="search-bar" placeholder="Search entire store...">
+        <div class="icon-menu">
+            <!-- Login Icon -->
+            <a href="signin.html" class="icon" id="login-icon">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/022/014/184/small/user-icon-member-login-isolated-vector.jpg" 
+                alt="Login Icon">
+            </a>
+            <!-- Bag Icon -->
+            <div class="icon" id="bag-icon">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/010/926/876/small/shopping-bag-line-style-icon-diwali-vector.jpg" 
+                alt="Bag Icon">
+            </div>            
+            <!-- Wishlist Icon -->
+            <div class="icon" id="wishlist-icon">
+                <img src="https://static.vecteezy.com/system/resources/previews/011/614/104/non_2x/wishlist-icon-wish-list-icon-symbol-sign-free-vector.jpg" 
+                alt="Wishlist Icon">
+            </div>
+        </div>
+    </header>
+
+    <!--Navigation -->
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="skincare.html">Skincare</a>
+        <a href="body-bath.html">Body & Bath</a>
+        <a href="hair.html">Hair</a>
+        <a href="fragrances.html">Fragrances</a>
+    </nav>
+
+    <!-- Wishlist Content -->
+    <div class="hero">
+        <h1>My Wishlist</h1>
+        <p>Here you can find the products you've added to your wishlist. You can save items for later or proceed to purchase them.</p>
+    </div>
+
+    <div class="wishlist-items" id="wishlist-items">
+    </div>
+
+    <script src="wishlist.js"></script>
+
+    <script>
+        window.onload = function() {
+            renderWishlist();
+        };
+    </script>
+</body>
+</html>
+
