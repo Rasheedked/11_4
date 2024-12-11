@@ -6,3 +6,37 @@ const wishlistData = [
     { id: 4, name: 'Into the night', price: 'AED 85.00', image: 'https://www.bathandbodyworks.ae/assets/styles/bbw/image-thumb__288114__product_listing/28003659_1.jpg' },
     { id: 5, name: 'Al-Jadayel Hair Oil', price: 'AED 49.00', image: 'Al-Jadayel Hair Oil.jpg' },
 ];
+// Render Wishlist Items
+function renderWishlist() {
+    const wishlistContainer = document.getElementById('wishlist-items');
+    wishlistContainer.innerHTML = '';
+    
+    wishlistData.forEach(function(item) {
+        const wishlistItem = document.createElement('div');
+        wishlistItem.classList.add('wishlist-item');
+        wishlistItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <p>${item.name}</p>
+            <p>${item.price}</p>
+            <button class="remove-btn" onclick="removeFromWishlist(${item.id})">Remove</button>
+            <button class="addtobag-btn" onclick="addToBag(${item.id})">Add to Bag</button>
+        `;
+        wishlistContainer.appendChild(wishlistItem);
+    });
+}
+
+// Remove Item from Wishlist
+function removeFromWishlist(itemId) {
+    let index= -1; // assuming the item is not found.
+    for (let i= 0; i< wishlistData.length; i++) {
+        if (wishlistData[i].id === itemId) {
+            index = i; 
+            break; 
+        }
+    }
+    if (index >-1) {
+        wishlistData.splice(index, 1); // splice to change the contents of an array by removing the elements.
+        renderWishlist();
+    }
+}
+
