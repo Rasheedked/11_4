@@ -26,18 +26,15 @@ function renderBagItems() {
     var bagItemsContainer = document.getElementById("bag-items");
     bagItemsContainer.innerHTML = ""; 
 
-    for (var i = 0; i < bagData.length; i++) {
-        var item = bagData[i];
-
-        // Create Bag Item
+    for (var i = 0; i< bagData.length; i++) {
+        var item= bagData[i];
+        
         var bagItemDiv = document.createElement("div");
         bagItemDiv.className = "bag-item";
 
-        // Item Image
         var itemImage = document.createElement("img");
         itemImage.src = item.image;
 
-        // Item Details
         var itemDetails = document.createElement("div");
         itemDetails.className = "bag-item-details";
 
@@ -74,7 +71,7 @@ function renderBagItems() {
 
 function removeFromBag(itemId) {
     var updatedBagData = [];
-    for (var i= 0; i < bagData.length; i++) 
+    for (var i= 0; i< bagData.length; i++) 
         {
         if (bagData[i].id != itemId) 
             {
@@ -110,6 +107,5 @@ function applyPromoCode()
     document.getElementById("subtotal").textContent = "AED " + subtotal.toFixed(2);
 }
 
-// Initial Render
 renderBagItems();
 
